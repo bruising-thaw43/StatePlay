@@ -1,36 +1,11 @@
 # StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation
 
 <p>
-  <a href="https://jimntu.github.io/stateplay_page/">
-    <img
-      src="https://img.shields.io/badge/Web-Project_Page-2478B5?style=flat-square&logo=googlechrome&logoColor=white"
-      alt="Project Page"
-    />
-  </a>
-  <a href="https://arxiv.org/abs/2607.26754">
-    <img
-      src="https://img.shields.io/badge/arXiv-StatePlay-B31B1B?style=flat-square&logo=arxiv&logoColor=white"
-      alt="arXiv Paper"
-    />
-  </a>
-  <a href="https://github.com/Jimntu/StatePlay">
-    <img
-      src="https://img.shields.io/badge/GitHub-Code-181717?style=flat-square&logo=github&logoColor=white"
-      alt="GitHub Code"
-    />
-  </a>
-  <a href="https://huggingface.co/onepiece1999/StatePlay">
-    <img
-      src="https://img.shields.io/badge/🤗_HuggingFace-Model-F2B134?style=flat-square"
-      alt="Hugging Face Model"
-    />
-  </a>
-  <a href="https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset">
-    <img
-      src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-F2B134?style=flat-square"
-      alt="Hugging Face Dataset"
-    />
-  </a>
+<a href="https://jimntu.github.io/stateplay_page/"><img src="https://img.shields.io/badge/Web-Project_Page-2478B5?style=flat-square&labelColor=555555&logo=googlechrome&logoColor=white" alt="Project Page"></a>
+<a href="https://arxiv.org/abs/2607.26754"><img src="https://img.shields.io/badge/arXiv-StatePlay-B31B1B?style=flat-square&labelColor=555555&logo=arxiv&logoColor=white" alt="arXiv"></a>
+<a href="https://github.com/Jimntu/StatePlay"><img src="https://img.shields.io/badge/GitHub-Code-181717?style=flat-square&labelColor=555555&logo=github&logoColor=white" alt="Code"></a>
+<a href="https://huggingface.co/onepiece1999/StatePlay"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-F2B134?style=flat-square&labelColor=555555" alt="Model"></a>
+<a href="https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset"><img src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-F2B134?style=flat-square&labelColor=555555" alt="Dataset"></a>
 </p>
 
 > ## **StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation**
