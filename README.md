@@ -1,4 +1,4 @@
-# StatePlay
+# StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation
 
 [**Project Page**](https://jimntu.github.io/stateplay_page/) ·
 [**Paper**](https://arxiv.org/abs/2607.26754) ·
@@ -6,33 +6,11 @@
 [**Dataset**](https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset) ·
 [**Model**](https://huggingface.co/onepiece1999/StatePlay)
 
+
+## Introduction
+
+StatePlay: Beyond pixel-level realism toward mechanics-consistent Game World Models! Instead of modeling gameplay through visual observations alone, we explicitly predict internal game states and use them to guide frame generation, ensuring consistency with the underlying game mechanics.
 ![StatePlay mechanics-consistent generation](assets/teaser.webp)
-
-## Abstract
-
-Recent game world models can generate visually realistic and interactive
-environments conditioned on player actions. However, games are not defined by
-pixels alone; they are governed by explicit mechanics, namely state-dependent
-rules that control health reduction, skill activation, and game termination.
-These mechanics depend on precise internal states, such as health points, skill
-meters, and timers, which are tightly coupled with visual observations and
-determine how gameplay evolves. Without modeling these state dynamics, existing
-game world models may generate visually plausible rollouts but violate the
-underlying game rules. In this paper, we propose **StatePlay**, a novel
-state-aware game world model that jointly predicts visual content and game
-states to promote mechanics-consistent generation. StatePlay adopts a
-mixture-of-transformers (MoT)-style architecture that preserves specialized
-visual and state representations while enabling cross-modal interaction,
-allowing predicted states to guide frame generation. Each branch is further
-optimized with a distinct objective suited to its modality. Experiments show
-that StatePlay achieves an average normalized L1 distance below 0.06 for state
-prediction. Furthermore, compared with models without explicit state modeling,
-our method improves mechanics fidelity in generated game rollouts by 18.6%.
-Overall, our work highlights the importance of state-aware game world modeling
-and advances beyond pixel-level realism toward complete and mechanically
-faithful game generation.
-
-![StatePlay architecture](https://jimntu.github.io/stateplay_page/static/images/stateplay.png)
 
 ## Installation
 
