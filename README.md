@@ -6,7 +6,7 @@
 [**Dataset**](https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset) ·
 [**Model**](https://huggingface.co/onepiece1999/StatePlay)
 
-![StatePlay mechanics-consistent generation](https://jimntu.github.io/stateplay_page/static/images/teaser.png)
+![StatePlay mechanics-consistent generation](assets/teaser.webp)
 
 ## Abstract
 
@@ -47,22 +47,13 @@ pip install -U pip
 pip install -e .
 ```
 
-Download the inference weights:
+### Model downloads
 
-```bash
-hf download onepiece1999/StatePlay \
-  StatePlay.safetensors \
-  --local-dir examples/checkpoint
-
-hf download Wan-AI/Wan2.2-TI2V-5B \
-  Wan2.2_VAE.pth \
-  models_t5_umt5-xxl-enc-bf16.pth \
-  --local-dir base_model/Wan-AI/Wan2.2-TI2V-5B
-
-hf download Wan-AI/Wan2.1-T2V-1.3B \
-  --include "google/umt5-xxl/*" \
-  --local-dir base_model/Wan-AI/Wan2.1-T2V-1.3B
-```
+| Model | Files used by StatePlay | Download |
+|---|---|---|
+| StatePlay | `StatePlay.safetensors` | [Hugging Face](https://huggingface.co/onepiece1999/StatePlay/tree/main) |
+| Wan2.2-TI2V-5B | VAE, T5 encoder, and DiT initialization weights | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/main) |
+| Wan2.1-T2V-1.3B | UMT5 tokenizer | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/tree/main) |
 
 Expected inference layout:
 
@@ -159,23 +150,8 @@ Use custom model paths through `STATEPLAY_BASE_MODEL` and
 
 ## Training
 
-Download the training dataset:
-
-```bash
-hf download onepiece1999/StatePlay-Dataset \
-  --repo-type dataset \
-  --local-dir data/StatePlay-Dataset
-```
-
-Download the three Wan2.2 DiT initialization shards:
-
-```bash
-hf download Wan-AI/Wan2.2-TI2V-5B \
-  diffusion_pytorch_model-00001-of-00003.safetensors \
-  diffusion_pytorch_model-00002-of-00003.safetensors \
-  diffusion_pytorch_model-00003-of-00003.safetensors \
-  --local-dir base_model/Wan-AI/Wan2.2-TI2V-5B
-```
+Download the [StatePlay dataset](https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset/tree/main)
+and the Wan2.2 DiT initialization weights listed in the model table above.
 
 Run training:
 
