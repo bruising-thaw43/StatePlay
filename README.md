@@ -49,11 +49,12 @@ pip install -e .
 
 ### Model downloads
 
-| Model | Files used by StatePlay | Download |
-|---|---|---|
-| StatePlay | `StatePlay.safetensors` | [Hugging Face](https://huggingface.co/onepiece1999/StatePlay/tree/main) |
-| Wan2.2-TI2V-5B | VAE, T5 encoder, and DiT initialization weights | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/main) |
-| Wan2.1-T2V-1.3B | UMT5 tokenizer | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/tree/main) |
+| Resource | Required for | Files | Download |
+|---|---|---|---|
+| StatePlay checkpoint | Inference | `StatePlay.safetensors` | [Hugging Face](https://huggingface.co/onepiece1999/StatePlay/tree/main) |
+| Wan2.2 VAE and T5 | Inference and training | `Wan2.2_VAE.pth`, `models_t5_umt5-xxl-enc-bf16.pth` | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/main) |
+| UMT5 tokenizer | Inference and training | `google/umt5-xxl/` | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/tree/main/google/umt5-xxl) |
+| Wan2.2 DiT base weights | Training only | Three `diffusion_pytorch_model-*.safetensors` shards | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/main) |
 
 Expected inference layout:
 
