@@ -14,3 +14,5 @@ outputs/
 # Example videos are generated locally and must not be committed.
 /examples/generated/
 /examples/reference_outputs/
+# Local Hugging Face model card draft.
+/HF_MODEL_CARD.md
