@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stateplay"
+version = "0.1.0"
+description = "State- and action-conditioned Street Fighter III world model"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "torch>=2.0.0", "torchvision", "transformers", "accelerate", "peft",
+  "datasets", "safetensors", "einops", "pandas", "pyarrow", "numpy",
+  "Pillow", "tqdm", "imageio[ffmpeg]", "sentencepiece", "protobuf",
+  "ftfy", "regex", "modelscope", "huggingface_hub",
+]
+
+[project.scripts]
+stateplay = "stateplay.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["stateplay*", "diffsynth*"]
+namespaces = true

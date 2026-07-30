@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+outputs/
+*.log
+
+# Model weights are downloaded separately and must not be committed.
+/base_model/
+/examples/checkpoint/
+
+# Example videos are generated locally and must not be committed.
+/examples/generated/
+/examples/reference_outputs/

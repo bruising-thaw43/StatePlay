@@ -1,0 +1,9 @@
+StatePlay
+
+The training support code under diffsynth/ is derived from DiffSynth-Studio
+(ModelScope Team) and is distributed under the Apache License 2.0. Only the
+Wan/StatePlay dependency path needed by this project is included.
+
+StatePlay uses the separately distributed Wan2.2-TI2V-5B base model and an SF3
+StatePlay checkpoint. Model weights and datasets may have their own licenses;
+verify those terms before redistribution.

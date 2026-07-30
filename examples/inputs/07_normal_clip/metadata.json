@@ -1,0 +1,8 @@
+{
+  "video": "clips/clip/video.mp4",
+  "action": "clips/clip/actions.parquet",
+  "distribution": "normal",
+  "prompt": "NPC: Active_Behavior(Crouch: Lowers stance to the ground to avoid high attacks or prepare low strikes.; Dash Left: A quick burst of ground movement to the left.), Passive_Behavior(Idle: A neutral stationary stance where no action is taken.), Strategy(Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.)",
+  "strategy": "Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.",
+  "category": "Defense"
+}

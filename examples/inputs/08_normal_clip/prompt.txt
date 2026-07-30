@@ -1,0 +1,1 @@
+NPC: Active_Behavior(N/A), Passive_Behavior(Idle: A neutral stationary stance where no action is taken.), Strategy(Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.)

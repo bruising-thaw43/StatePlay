@@ -1,0 +1,3 @@
+*.safetensors binary
+*.mp4 binary
+*.parquet binary

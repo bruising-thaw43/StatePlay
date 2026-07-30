@@ -1,0 +1,9 @@
+id,input_dir,output_name,reference_name
+01,inputs/01_macro_success_clip,01_macro_success_clip.mp4,01_macro_success_clip.mp4
+02,inputs/02_macro_success_clip,02_macro_success_clip.mp4,02_macro_success_clip.mp4
+03,inputs/03_result_win_clip,03_result_win_clip.mp4,03_result_win_clip.mp4
+04,inputs/04_result_win_clip,04_result_win_clip.mp4,04_result_win_clip.mp4
+05,inputs/05_result_lose_clip,05_result_lose_clip.mp4,05_result_lose_clip.mp4
+06,inputs/06_result_lose_clip,06_result_lose_clip.mp4,06_result_lose_clip.mp4
+07,inputs/07_normal_clip,07_normal_clip.mp4,07_normal_clip.mp4
+08,inputs/08_normal_clip,08_normal_clip.mp4,08_normal_clip.mp4

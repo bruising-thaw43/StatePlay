@@ -1,0 +1,8 @@
+{
+  "video": "clips/clip/video.mp4",
+  "action": "clips/clip/actions.parquet",
+  "distribution": "Macro_success",
+  "prompt": "NPC: Active_Behavior(Walk Left: Moves horizontally to the left on the ground.), Passive_Behavior(Idle: A neutral stationary stance where no action is taken.; Take Hit: Sustains damage and enters hitstun from a successful opponent strike.; Launched: Is knocked high into the air by specific strikes or juggles.; Knockback: Is pushed horizontally across the screen from taking a heavy hit.; Knockdown: Falls heavily to the ground after receiving a sweep, throw, or heavy strike.; Wake Up: The transitional animation of getting back on feet after a knockdown.), Strategy(Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.)",
+  "strategy": "Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.",
+  "category": "Defense"
+}

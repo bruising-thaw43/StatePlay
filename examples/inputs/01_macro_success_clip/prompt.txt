@@ -1,0 +1,1 @@
+NPC: Active_Behavior(Kazegiri: A rising high kick used primarily to intercept aerial opponents.), Passive_Behavior(Standing Block: Mitigates damage from high and mid-level attacks while standing.; Idle: A neutral stationary stance where no action is taken.), Strategy(Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.)

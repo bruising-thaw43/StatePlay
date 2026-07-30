@@ -1,0 +1,8 @@
+{
+  "video": "clips/clip/video.mp4",
+  "action": "clips/clip/actions.parquet",
+  "distribution": "Result_win",
+  "prompt": "NPC: Active_Behavior(N/A), Passive_Behavior(Take Hit: Sustains damage and enters hitstun from a successful opponent strike.; Knockback: Is pushed horizontally across the screen from taking a heavy hit.; Launched: Is knocked high into the air by specific strikes or juggles.; Knockdown: Falls heavily to the ground after receiving a sweep, throw, or heavy strike.), Strategy(Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.)",
+  "strategy": "Passive Guarding: Remains stationary while utilizing standing or crouching blocks to mitigate incoming damage.",
+  "category": "Defense"
+}

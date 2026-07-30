@@ -1,0 +1,1 @@
+NPC: Active_Behavior(Throw: A close-range grab that bypasses standard blocking.; Raida: A command throw that unleashes explosive energy upon grabbing the opponent.), Passive_Behavior(Idle: A neutral stationary stance where no action is taken.), Strategy(Wake-up Pressure: Attacks the opponent immediately as they recover from a knockdown state.)
