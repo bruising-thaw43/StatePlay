@@ -155,8 +155,23 @@ export STATEPLAY_OUTPUT="$PWD/outputs/StatePlay"
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 ./scripts/train.sh
-```
 
 The script derives the process count from `CUDA_VISIBLE_DEVICES`. It trains at
 480×832 with 101 frames, learning rate `5e-5`, state sampling `end`, and saves
 every 500 steps.
+
+✉️ Feel free to email me (zijun002@e.ntu.edu.sg) or raise the issue if you have any questions about our work.
+
+## Citation
+If you find our work useful in your research, please cite it as follows:
+```
+@misc{lin2026stateplaystateawaregameworld,
+      title={StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation}, 
+      author={Zijun Lin and Zeqing Wang and Cheston Tan and Bihan Wen and Yeying Jin},
+      year={2026},
+      eprint={2607.26754},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2607.26754}, 
+}
+```
