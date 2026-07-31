@@ -155,7 +155,7 @@ export STATEPLAY_OUTPUT="$PWD/outputs/StatePlay"
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 ./scripts/train.sh
-
+```
 The script derives the process count from `CUDA_VISIBLE_DEVICES`. It trains at
 480×832 with 101 frames, learning rate `5e-5`, state sampling `end`, and saves
 every 500 steps.
